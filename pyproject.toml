@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evyni"
+version = "0.1.0"
+description = "A self-hosted companion with an editable persona, memory, timing and voice."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Evyni contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+feishu = ["lark-oapi>=1.4.16,<2"]
+
+[project.scripts]
+evyni = "evyni.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
